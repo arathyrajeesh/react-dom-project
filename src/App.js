@@ -1,44 +1,28 @@
 import './App.css';
-import './components/Header';
-import './components/Footer';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './components/Home';
-import Client from './components/Client';
-import Manage from './components/Manage';
-import Spending from './components/Spending';
-import Help from './components/Help';
-import Design from './components/Design';
-import Customers from './components/Customers';
-import Marketing from './components/Marketing';
-import Demo from './components/Demo'
+import { BrowserRouter, Route, Routes }  from 'react-router-dom'
+import Homepage from './pages/Homepage';
+import Features from './pages/Features';
+import Community from './pages/Community';
+import NotFound from './pages/404Page';
+import Blog from './pages/Blog';
 
 
 function App() {
-
-return (
-    <>
-    <BrowserRouter>
-    <Routes>
-        <Route path='/' element ={<Home/>}/>
-        <Route path='/about' element ={<About/>}/>
-        <Route path='/contact' element ={<Contact/>}/>
-    </Routes>
-    </BrowserRouter>
-    <Header/>
-    {/* <Home/> */}
-    <Client/>
-    <Manage/>
-    <Spending/>
-    <Help/>
-    <Design/>
-    <Customers/>
-    <Marketing/>
-    <Demo/>
-    <Footer/>
-    </>
-);
-
+    return(
+        <BrowserRouter>
+        <Header/>
+        <Routes>
+            <Route path='/'element={<Homepage/>}/>
+            <Route path='/features' element={<Features/>}/>
+            <Route path='/community' element={<Community/>}/>
+            <Route path='/blog' element={<Blog/>}/>
+            <Route path='*'element={<NotFound/>}/>
+        </Routes>
+        <Footer/>
+        </BrowserRouter>
+    )
 }
 
 export default App;

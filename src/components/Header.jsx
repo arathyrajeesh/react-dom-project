@@ -1,4 +1,7 @@
 import '../styles/Header.css';
+import { Link } from "react-router-dom"
+
+
 
 const Header = () => {
     return(
@@ -10,10 +13,10 @@ const Header = () => {
                 </a>
                 <nav className='list-items'>
                     <ul>
-                        <li><a href='#'>Home</a></li>
-                        <li><a href='#'>Features</a></li>
-                        <li><a href='#'>Community</a></li>
-                        <li><a href='#'>Blog</a></li>
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li><Link to={'/features'}>Features</Link></li>
+                        <li><Link to={'/community'}>Community</Link></li>
+                        <li><Link to={'/blog'}>Blog</Link></li>
                         <li><a href='#'>Pricing</a></li>
                     </ul>
                 </nav>
