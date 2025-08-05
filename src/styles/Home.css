@@ -1,0 +1,86 @@
+:root {
+    --container-max-width: 1200px;
+    --primary-green: #22c55e;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+    padding: 0 20px;
+}
+
+.home-section {
+    padding: 60px 0;
+    background-color: #eaeef1;
+}
+
+.home {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 40px;
+}
+
+.home-banner {
+    text-align: center;
+}
+
+.home-banner h1 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    line-height: 1.2;
+}
+
+.home-banner .highlight-text {
+    color: var(--primary-green);
+}
+
+.home-banner p {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin-top: 15px;
+    max-width: 500px;
+}
+
+.home-banner .register-button {
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: var(--primary-green);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.home-banner .register-button:hover {
+    background-color: #15803d;
+}
+
+.home-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .home {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .home-banner {
+        text-align: left;
+        max-width: 50%;
+    }
+
+    .home-banner h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-logo {
+        max-width: 45%;
+    }
+}

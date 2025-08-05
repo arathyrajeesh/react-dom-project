@@ -1,0 +1,32 @@
+.manage{
+    min-height: 400px;
+}
+.manage-home h1{
+    text-align: center;
+}
+.manage-home p{
+    text-align: center;
+}
+.manage-home{
+    min-width: 250px;
+}
+.card-container {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    place-content: center;
+}
+.card-container .card{
+    padding: 100px;
+    border: none;
+}
+.card p{
+    font-size: 18px;
+}
+.card h4{
+    font-size: 18px;
+}
+.card img{
+    width: 50px;
+}
+

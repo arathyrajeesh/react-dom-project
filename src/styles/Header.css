@@ -1,0 +1,88 @@
+:root {
+    --primary-green: #22c55e;
+    --text-color-primary: #1f2937;
+    --text-color-link: #6b7280;
+}
+
+.site-header {
+    padding: 20px 0;
+    color: var(--text-color-primary);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-link img {
+    width: 35px;
+}
+
+.list-items ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.list-items a {
+    text-decoration: none;
+    color: var(--text-color-link);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.list-items a:hover {
+    color: var(--primary-green);
+}
+
+.register-button {
+    border: 1px solid var(--primary-green);
+    background-color: var(--primary-green);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #15803d;
+}
+
+@media (max-width: 767px) {
+    .list-items, .register-button {
+        display: none;
+    }
+    .header-content {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .list-items {
+        display: block;
+    }
+    .register-button {
+        display: block;
+    }
+}
